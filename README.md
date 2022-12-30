@@ -6,7 +6,7 @@ it's about some notes and demos of my reading of Secrets of the Javascript Ninja
 
 #### Promise
 
-​ promise 对象是对我们现在尚未得到但将来会得到值的占位符。它是对我们最终能够得知异步计算结果的一种保证。promise 既可以成功也可以失败，并且一旦设定好了，就不能够有更多改变。
+promise 对象是对我们现在尚未得到但将来会得到值的占位符。它是对我们最终能够得知异步计算结果的一种保证。promise 既可以成功也可以失败，并且一旦设定好了，就不能够有更多改变。
 
 ```js
 new Promise((resolve, reject) => {
@@ -172,7 +172,7 @@ values.sort((v1, v2) => {
 - 作用域
 - 基于原型的面向对象
 
-​ 对象、原型、函数和闭包的紧密结合组成了 JavaScript。
+对象、原型、函数和闭包的紧密结合组成了 JavaScript。
 
 #### 深入学习
 
@@ -247,7 +247,7 @@ console.timeEnd('My operation');
 
 #### 生命周期
 
-​ 从用户的角度来说，浏览器构建了发送至服务器的请求，该服务器处理了请求并形成了一个通常由 HTML、CSS 和 JavaScript 代码所组成的响应。当浏览器接收了响应时，我们的客户端应用开始了它的**生命周期**。
+从用户的角度来说，浏览器构建了发送至服务器的请求，该服务器处理了请求并形成了一个通常由 HTML、CSS 和 JavaScript 代码所组成的响应。当浏览器接收了响应时，我们的客户端应用开始了它的**生命周期**。
 
 包括:
 
@@ -263,23 +263,23 @@ console.timeEnd('My operation');
 
 在页面构建阶段, 以上 2 个步骤会交替执行多次
 
-​ 页面构建阶段始于浏览器接收 HTML 代码时，该阶段为浏览器构建页面 UI 的基础。通过解析收到的 HTML 代码，构建一个个 HTML 元素，构建 DOM。在这种对 HTML 结构化表示的形式中，每个 HTML 元素都被当作一个节点。
+页面构建阶段始于浏览器接收 HTML 代码时，该阶段为浏览器构建页面 UI 的基础。通过解析收到的 HTML 代码，构建一个个 HTML 元素，构建 DOM。在这种对 HTML 结构化表示的形式中，每个 HTML 元素都被当作一个节点。
 
 注意:
 
-​ 尽管 DOM 是根据 HTML 来创建的，两者紧密联系，但需要强调的是，它们**两者并不相同**。你可以把 HTML 代码看作浏览器页面 UI 构建初始 DOM 的蓝图。为了正确构建每个 DOM，浏览器还会修复它在蓝图中发现的问题。
+尽管 DOM 是根据 HTML 来创建的，两者紧密联系，但需要强调的是，它们**两者并不相同**。你可以把 HTML 代码看作浏览器页面 UI 构建初始 DOM 的蓝图。为了正确构建每个 DOM，浏览器还会修复它在蓝图中发现的问题。
 
 #### 版本规范
 
 HTML 规范和 DOM 规范
 
-​ 当前 HTML 的版本是 HTML5, 可以通过 https://html.spec.whatwg.org/ 查看当前版本中有哪些可用特性。你若需要更易读的文档，我们向你推荐 Mozilla 的 HTML5 指南，可通过https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5 查看。
+当前 HTML 的版本是 HTML5, 可以通过 https://html.spec.whatwg.org/ 查看当前版本中有哪些可用特性。你若需要更易读的文档，我们向你推荐 Mozilla 的 HTML5 指南，可通过https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5 查看。
 
-​ 而另一方面，DOM 的发展则相对缓慢。当前的 DOM 版本是 DOM3，可以通过https://dom.spec.whatwg.org/ 查看该标准。同样，Mozilla 也为 DOM 提供了一份报告，可以通过https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model 进行查看。
+而另一方面，DOM 的发展则相对缓慢。当前的 DOM 版本是 DOM3，可以通过https://dom.spec.whatwg.org/ 查看该标准。同样，Mozilla 也为 DOM 提供了一份报告，可以通过https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model 进行查看。
 
 #### 执行 JavaScript 代码
 
-​ 所有包含在脚本元素中的 JavaScript 代码由浏览器的 JavaScript 引擎执行
+所有包含在脚本元素中的 JavaScript 代码由浏览器的 JavaScript 引擎执行
 
 引擎有:
 
@@ -287,9 +287,9 @@ HTML 规范和 DOM 规范
 - Chrome 和 Opera 的 V8 引擎
 - Edge 的（IE 的）Chakra 引擎
 
-​ 由于代码的主要目的是提供动态页面，故而浏览器通过全局对象提供了一个 API 使 JavaScript 引擎可以与之交互并改变页面内容。
+由于代码的主要目的是提供动态页面，故而浏览器通过全局对象提供了一个 API 使 JavaScript 引擎可以与之交互并改变页面内容。
 
-​ 主要全局对象为 windows 对象，代表包含一个页面的窗口。属性 document，代表当前页面的 DOM。通过使用 windows 对象，JavaScript 代码能在任何程度上改变 DOM，包括修改/移除现存节点，以及创建和插入新节点。
+主要全局对象为 windows 对象，代表包含一个页面的窗口。属性 document，代表当前页面的 DOM。通过使用 windows 对象，JavaScript 代码能在任何程度上改变 DOM，包括修改/移除现存节点，以及创建和插入新节点。
 
 WebAPI 接口查询：https://developer.mozilla.org/en-US/docs/Web/API
 
@@ -302,9 +302,9 @@ WebAPI 接口查询：https://developer.mozilla.org/en-US/docs/Web/API
 
 #### 在页面构建阶段执行 JavaScript 代码
 
-​ 在页面构建阶段，浏览器会遇到特殊类型的 HTML 元素——脚本元素<script>，该元素用于包括 JavaScript 代码。每当解析到脚本元素时，浏览器就会停止从 HTML 构建 DOM，并开始执行 JavaScript 代码。
+在页面构建阶段，浏览器会遇到特殊类型的 HTML 元素——脚本元素<script>，该元素用于包括 JavaScript 代码。每当解析到脚本元素时，浏览器就会停止从 HTML 构建 DOM，并开始执行 JavaScript 代码。
 
-​ 一般来说，JavaScript 代码能够在任何程度上修改 DOM 结构：它能创建新的节点或移除现有 DOM 节点。但它依然不能做某些事情，例如选择和修改还没被创建的节点。这就是为什么要把 script 元素放在页面底部的原因。如此一来，我们就不必担心是否某个 HTML 元素已经加载为 DOM。
+一般来说，JavaScript 代码能够在任何程度上修改 DOM 结构：它能创建新的节点或移除现有 DOM 节点。但它依然不能做某些事情，例如选择和修改还没被创建的节点。这就是为什么要把 script 元素放在页面底部的原因。如此一来，我们就不必担心是否某个 HTML 元素已经加载为 DOM。
 
 ### 事件处理
 
@@ -701,7 +701,7 @@ arguments 对象仅是一个类数组结构，在使用中要尤其注意
 
 建议避免使用别名：
 
-​ 将 arguments 对象作为函数参数的别名使用时会影响代码的可读性，因此在 JavaScript 提供的严格模式（strict mode）中将无法再使用它。即不会改变传进来的实参
+将 arguments 对象作为函数参数的别名使用时会影响代码的可读性，因此在 JavaScript 提供的严格模式（strict mode）中将无法再使用它。即不会改变传进来的实参
 
 ##### this
 
@@ -971,3 +971,173 @@ apply 方法与 call 方法的使用方式类似，不同点在于是直接以�
    ```
 
 5.
+
+### Chap5 精通函数：闭包和作用域
+
+#### Q
+
+- 一个变量或方法有几种不同的作用域？作用域分别是什么？
+  - 2 种作用域：全局执行作用域、函数执行作用域
+- 如何定位标识符及其值？
+  - 通过词法环境
+- 什么是可变变量？如何在 JavaScript 中定义可变变量？
+  - 使用 const/let 定义的非静态类型变量，定义空对象或者空数组
+
+#### 使用闭包
+
+##### 封装私有变量
+
+使用构造函数内的变量和构造方法来模拟对象的私有变量
+
+```js
+function Ninja() {
+  var feints = 0;
+
+  this.getFeints = function () {
+    return feints;
+  };
+
+  this.feint = function () {
+    feints++;
+  };
+}
+
+var ninja1 = new Ninja();
+ninja1.feint();
+```
+
+#### 在回调中使用
+
+处理回调函数，简化代码
+
+#### 词法环境
+
+lexical environment
+
+- 是 JavaScript 引擎内部用来跟踪标识符和特定变量之间的映射关系
+- JavaScript 作用域内部的实现机制，也就是所说的作用域
+- 相关属性存储在内部对象`[[Environment]]`，无法直接访问或操作
+
+词法环境执行过程
+1、一旦创建，就会执行第一个阶段，该阶段没有执行代码，JavaScript 引擎会访问并注册当前词法环境中的所声明的变量和函数
+2、第二阶段，具体执行取决于变量的类型（`let`、`var`、`const` 和函数声明）以及环境类型（全局环境、函数环境或块级作用域）
+
+#### var
+
+- 在距离最近的函数内或者全局词法环境中注册，不关注块级作用域
+- 存在变量提升
+
+#### let & const
+
+- 定义最近的块级别、函数级别、全局级别的变量
+- 块级别在 ES6 之前无法实现
+- `const` 允许定义只赋值一次的变量
+- `let` 可以再次赋值
+
+闭包允许访问函数创建时所在的作用域内的变量  
+闭包是消耗内存成本的，因为闭包始终保持创建时所在的作用域内的变量
+
+### Chap6 未来的函数：生成器和 Promise
+
+#### Q
+
+- 生成器函数的主要用途是什么？
+- 在异步代码中，为什么使用 promise 比使用简单的回调函数更好？
+- 使用 promise.race 来执行很多长期执行的任务时，promise 最终会在什么时候变成 resolved 状态？它什么时候会无法变成 resolved 状态？
+
+#### 🌰
+
+使用生成器和 promise 编写优雅的代码
+
+```js
+async (function*() {
+  try {
+    const ninjas = yield getJSON('ninjas.json')
+    const missions = yield getJSON(ninjas[0].missionsUrl)
+    const missionDescription = yield getJSON(missions[0].detailsUrl)
+    // Study the mission details
+  }
+  cache (e) {
+    // oh no, we weren't able to get the mission details
+  }
+})
+```
+
+#### 生成器函数
+
+features：
+
+- 函数类型
+- 生成一组值的序列
+- 每个值的生成基于每次请求
+- 必须显式向生成器请求
+- 没有返回值
+- 调用并不会执行生成器函数，而是创建迭代器（iterator）对象
+
+notice：区别于
+
+定义生成器：
+
+- 关键字 `function` 后添加 `*` 定义生成器函数
+- 在生成器函数内部使用 `yield` 关键字生成独立的值
+
+```js
+function* test() {
+  yield '1';
+  yield '2';
+  yield '3';
+}
+```
+
+#### 迭代生成的值序列
+
+使用 while
+
+```js
+function* test() {
+  yield '1';
+  yield '2';
+  yield '3';
+}
+
+const testIterator = test();
+let item;
+
+while (!(item = test.next()).done) {
+  // item !== null
+}
+```
+
+#### 使用场景
+
+##### 生成唯一 ID 序列
+
+简单不易被修改
+
+```js
+function* IdGenerator() {
+  let id = 0;
+  while (true) {
+    yield id++;
+  }
+}
+
+const idIterator = IdGenerator();
+
+const ninja1 = {
+  id: idIterator.next().value,
+};
+
+const ninja2 = {
+  id: idIterator.next().value,
+};
+```
+
+##### 递归遍历 DOM
+
+DOM 结构=》树形结构，每个节点只有一个跟节点以及 0 到多个子节点  
+通常，遍历 DOM 采用递归方式
+
+`yield*`
+
+#### 与生成器交互
